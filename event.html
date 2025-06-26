@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Événements</title>
+</head>
+<body>
+  <h1>Liste des événements</h1>
+  <ul id="events-list"></ul>
+
+  <script>
+    // Appeler l'API backend pour récupérer les événements
+    fetch('http://localhost:3000/api/events')
+      .then(response => {
+        if (!response.ok) throw new Error('Erreur réseau');
+        return response.json();
+      })
+      .then(events => {
+        const ul = document.getElementById('events-list');
+        events.forEach(event => {
+          const li = document.createElement('li');
+          li.textContent = `${event.title} - ${event.date}`;
+          ul.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error('Erreur:', err);
+        const ul = document.getElementById('events-list');
+        ul.textContent = "Impossible de charger les événements.";
+      });
+  </script>
+</body>
+</html>

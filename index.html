@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Events Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="home-body">
+  <header class="main-header">
+  <div class="container header-flex">
+    <div class="logo-title">
+      <img src="assets/LOGO.jpeg" alt="Logo" class="logo-img" />
+      <h1>Campus Events Hub</h1>
+    </div>
+    <nav>
+      <a href="login.html">Connexion</a>
+      <a href="register.html">Inscription</a>
+      <a href="create_event.html" class="btn-nav">+ Nouvel événement</a>
+
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">🌓 Thème</button>
+
+  </div>
+</header>
+
+
+  <section class="filters container">
+    <input type="date" id="filter-date" />
+    <select id="filter-category">
+      <option value="">Toutes les catégories</option>
+      <option value="club">Clubs</option>
+      <option value="atelier">Ateliers</option>
+      <option value="sport">Sports</option>
+      
+    </select>
+  </section>
+<section class="hero container">
+  <img src="assets/INPT.jpeg" alt="Bienvenue à Campus Events Hub" class="hero-img" />
+</section>
+
+  <section class="events-list container" id="events-list">
+    <!-- JS va insérer ici les cartes d’événements -->
+  </section>
+
+<script src="js/main.js"></script>
+
+
+  <footer class="main-footer">
+  <div class="container">
+    <p><strong>Institut National des Postes et Télécommunications (INPT)</strong></p>
+    <p>Avenue Allal El Fassi, Madinat Al Irfane, Rabat, Maroc</p>
+    <p>Tél : +212 5 37 71 59 00 | Email : contact@inpt.ac.ma</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
